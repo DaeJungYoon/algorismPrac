@@ -1,5 +1,5 @@
 import sys
-input = sys.stdin.read
+input = sys.stdin.readline
 
 T = input().strip()
 message = T+"?!!"
