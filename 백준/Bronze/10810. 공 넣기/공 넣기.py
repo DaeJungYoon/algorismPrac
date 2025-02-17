@@ -1,14 +1,15 @@
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 
 n,m = map(int, input().split())
 
-basket = [0]*n
+result = [0]*n
 
-for l in range(m):
-  i,j,k = map(int,input().split())
-  for x in range(i,j+1):
-    basket[x-1] = k
+for _ in range(m):
+  i,j,k = map(int, input().split())
+  for x in range(i-1,j):
+    result[x] = k
 
-for x in range(n):
-  print(basket[x], end=" ")
+
+
+print(*result)
