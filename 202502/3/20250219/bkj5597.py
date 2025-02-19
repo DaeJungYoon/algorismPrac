@@ -1,23 +1,39 @@
 import sys
 input=sys.stdin.readline
 
-passList= []
-passList2= []
-
-
+numbers = []
 for _ in range(28):
-  a = int(input())
-  passList.append(a)
+  numbers.append(int(input()))
 
-for i in range(30):
-  passList2.append(i+1)
+results = []
+for number in range(1,31):
+  if number not in numbers:
+    results.append(number)
 
-resultList = list(set(passList2)-set(passList))
-resultList.sort()
+results.sort()
+for result in results:
+  print(result)
+
+# passList= []
+# passList2= []
 
 
-for i in resultList:
-  print(i)
+# for _ in range(28):
+#   a = int(input())
+#   passList.append(a)
+
+# for i in range(30):
+#   passList2.append(i+1)
+
+# resultList = list(set(passList2)-set(passList))
+# resultList.sort()
+
+
+# for i in resultList:
+#   print(i)
+
+
+
 # for i in passList:
 #   for j in range(len(passList)):
 #     if i != a:
